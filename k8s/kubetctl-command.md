@@ -88,6 +88,9 @@
       unset           Unset an individual value in a kubeconfig file
       use-context     Set the current-context in a kubeconfig file
       view            Display merged kubeconfig settings or a specified kubeconfig file
+          
+          Usage:
+      kubectl config SUBCOMMAND [options]
 
 ### Make a copy of existing config files
 ```
