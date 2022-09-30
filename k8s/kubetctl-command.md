@@ -69,3 +69,21 @@
 ### delete with config
 `kubectl delete -f nginx-deployment.yaml`
 
+# Merge Kubernetes kubectl config files
+
+### Make a copy of existing config files
+```
+$ cp ~/.kube/config ~/.kube/config.bak
+```
+### Merge the two config files together into a new config file as save it as a new file
+```
+$ KUBECONFIG=~/.kube/config:/path/to/new/config kubectl config view --flatten > /tmp/config
+```
+### Replace the old config file with the brand new merged config file from the previous step
+```
+$ mv /tmp/config ~/.kube/config
+```
+### Delete the backup after testing the merged config file(optional) 
+```
+$ rm 
+
