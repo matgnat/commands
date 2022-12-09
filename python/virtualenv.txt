@@ -1,0 +1,14 @@
+pip install virtualenv
+
+-> create folder for all virtual env to keep them in one place
+$ mkdir Environments
+
+-> go to that folder and create virtual environemnt
+$ cd !$
+$ python -m virtualenv new_env_name
+
+-> activate new virtual environemnt
+$ source new_env_name/bin/activate
+
+-> move out from virtual environemnt
+$ deactivate
