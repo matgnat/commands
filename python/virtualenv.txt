@@ -12,3 +12,6 @@ $ source new_env_name/bin/activate
 
 -> move out from virtual environemnt
 $ deactivate
+
+-> create new virtual environemnt wich specyfic python version
+$ python -m virtualenv -p /usr/bin/python3.7 new_env_name
