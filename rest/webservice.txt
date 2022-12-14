@@ -1,0 +1,11 @@
+## httpstatus spring
+https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/http/HttpStatus.html
+
+success => 200
+created => 201
+no content => 204
+unauthorized => 401
+bad request (such a validation error) => 400
+resource not found => 404
+server error => 500
+
