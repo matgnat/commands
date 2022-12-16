@@ -18,4 +18,21 @@ http://localhost:8080/swagger-ui/index.html
 		</dependency>
 
 
+Content Negotiation - different header value for types, accept-language
+Same resource, same URI
+- different content type - XML ir JSON
+- different language - English or Polish
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-xml</artifactId>
+		</dependency>
+
+to get response in json/xml
+Header - Accept -> application/json
+Header - Accept -> application/xml
+
+Internationalization - i18n
+- have consumers from around the world
+- typically HTTP Request Header - Accept-Language
 
