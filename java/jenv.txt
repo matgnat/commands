@@ -1,0 +1,118 @@
+https://winterbe.com/posts/2014/03/16/java-8-tutorial/
+
+
+-->> interface methods 
+
+- non-abstract method implementations to interfaces by utilizing the default keyword
+===============
+interface Formula {
+    double calculate(int a);
+
+    default double sqrt(int a) {
+        return Math.sqrt(a);
+    }
+}
+===============
+
+
+-->> lambda expressions 
+
+===============
+- Collections.sort(names, (String a, String b) -> {
+    return b.compareTo(a);
+});
+- Collections.sort(names, (String a, String b) -> b.compareTo(a));
+- Collections.sort(names, (a, b) -> b.compareTo(a));
+===============
+
+
+-->> method references 
+-->> repeatable annotations
+
+
+
+LAMBDAS
+((args >= 0) -> code)
+
+
+===============
+List<Map<String, List<String>>> to List<String>
+
+List<String> finalList = listOfMap.stream().map(map -> (List<String>) map.get(KEY))
+    .flatMap(x -> x.stream()).distinct()
+    .collect(Collectors.toList());
+
+===============
+List<Map<String, Object>> to List<String>
+
+List<Object> finalList = listOfMap.stream().map(map -> map.get(KEY))
+    .collect(Collectors.toList());
+	
+	
+STREAMS
+===============
+SOURCE -> FILTER || SORT || MAP -> COLLECT
+
+Stream source -> can be created from Collections, List, Sest, ints, longs, doubles, arrays, lines of a file 
+
+- intermedialt operation -> filer, map, sort -> return stream 
+- terminal operation -> forEach, collect -> return either void or non-stream results
+
+
+intermediate operation
+- anyMatch(), distinct(), filter(), findFirst(), flatmap(), map(), skip(), sorted()
+
+* zero or more operation is allowed
+* order matters for large set: FILTER FIRST, then sort or map
+* for very large datasets use ParallelStream to enable multiple threads
+
+terminal operation
+- count(), max(), min(), reduce(), summaryStatistics()
+
+* forEach applies the same function to each element 
+* collect saves the elements into a collection
+* other above option reduce the stream to a single summary element
+
+
+
+JENV - manage few java distribution on your pc
+============================================================
+* install some JDK
+ 	brew cask install AdoptOpenJDK/openjdk/adoptopenjdk{8,11,13}
+
+* install jenv
+ 	brew install jenv
+
+* add the following to your shells configuration file - to  ~/.bash_profile
+ 	export PATH="$HOME/.jenv/bin:$PATH"
+ 	eval "$(jenv init -)"
+
+* enable a couple of plugins
+ 	# ensure that JAVA_HOME is correct
+	jenv enable-plugin export
+	# make Maven aware of the Java version in use (and switch when your project does)
+	jenv enable-plugin maven
+
+* make JEnv aware of the JDK’s which we installed earlier
+	for version in 8 11 13
+	do
+	   jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-$version.jdk/Contents/Home
+	done
+	
+	jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-9.jdk/Contents/Home
+	
+* assign a default system-wide version use
+	jenv global 11.0
+	
+* If a specific project needs a different version of Java. 
+	jenv local 13.0 // standing in the directory of that project
+	
+* check path
+	/usr/libexec/java_home -V
+
+
+
+
+
+
+
