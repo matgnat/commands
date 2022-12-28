@@ -1,0 +1,58 @@
+SOLID
+
+- Single Responsible Principle  
+	- class or method has single reason for changing 
+- Open - Closed Principle (open for extension, closed for modification) 
+	- classes are open for inheritance & methods can be overridden and closed means that existing base classes should not be modified
+- Liskov Substitution Principle 
+	- try to aviod extension if you have two similar object. Rather extend common behavior to interface
+	- there is violation when child class completly modifies the behavoir/contract of base class method by overriding it.
+- Interface Segregation Principle 
+	- clinet should not be forced to depend upon interface (methods) that they not use 
+	- Devide bigger interfaces with unrelated methods in them into smaller, highly cohesive interface)
+- Dependency Inversion Principle 
+	- hight level modules should not depend upon low level modules. Both should depend upon abstraction
+	- abstraction should not depend upon details. Details should depend upon abstraction
+	- code should not create objects of all its dependencies itsel. Dependencies should be provided to the code from outside
+	
+	
+Design patterns:
+- creation patterns - deal with the process of creation of objects of classes
+- stuctural patterns - deal with how classes and objects are arranged and composed
+- behavioral patterns - how classes and objects interact & communicate with each other 
+	
+
+SOLID principles
+
+The Single Responsibility Principle - A class should have one, and only one reason to change.
+
+The Open Closed Principle - You should be able to extend a class behavior without modifying it.
+
+The Liskov Substitution Principle - Derived classes must be substitutable for its base classes.
+
+The Interface Segregation Principle - Make fine grained interfaces that are client-specific.
+
+The Dependency Inversion Principle - Depend on abstractions, not on concretions.
+
+
+Structural design patterns
+- Page Object Models 
+- Composite patterns
+- Facade patterns
+- Decorator patterns
+
+
+Creational design patterns
+- Factory method patterns
+- Builder patterns
+- Singleton patterns
+
+
+Behavioral design patterns
+- Strategy patterns
+
+https://www.devbridge.com/articles/top-design-pattern-test-automation-frameworks/
+
+
+- Adapter pattern
+- Lazy initialization pattern
