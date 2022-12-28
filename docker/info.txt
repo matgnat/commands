@@ -1,0 +1,156 @@
+DOCKER
+
+- Pytania ???
+
+- jak uruchamiać testy
+- jak skonfiguraować aby łączyć się z backendem (porty API)
+- jak zarządzać wersjami
+- jaka wersja na którym środowiksu
+
+
+
+## HOW TO RUN
+- $ docker run -d -p 8080:8080 --name adminer adminer:latest
+- $ docker ps -a
+
+
+
+## Infrastrucute as code
+
+## Docker-compose: orkiestracja kontenerów
+
+- nie wszystko na jednym contenerze
+- każda aplikacja na oddzielnym kontenerze
+
+## montowanie lokalnego katalogu "volumes:" Dla tych katalogów każda lokalna zmiana bedzie widoczna w kontenerze
+
+
+mailcatcher: -> łapie maila
+
+Docker compose up - uruchamianie contenerów aplikacji na serwerze (tych wszystkich które wchodzą w skład compose up)
+
+
+Dockerfile
+
+targety - wybieramy co chcemy zbudować,co dodać, co zmienić w stosunku do targetu developerskiego
+???? targer QA w docker-compose gdzie aplikacje zawierają porty
+
+Warstwy w docker-compose
+Tak że uruchamiamy aplikację z docker-compose dla dev i doklejamy docker-compose dla test
+
+docker-compose -f docker-compose.yml -f docker-compose-test.yml up 
+
+Czy można stworzyć docker compose dedykowany dla QA. Gdzie zarządzam sobie wersjami aplikacji, dodaje co chce 
+
+Docker compose
+
+Warstwa produkcyjna + rozwijana o warstwę developerską + ewentulana doklejka dla testów
+
+setup bazowy -> setup produkcyjny 
+setup developerski -> nadpisuje bazowy, reszta bez zmian
+póżniej ewentulanie jakiś CI / setup pod lokalne testy 
+
+
+========================================================
+
+CLIENT -> DOCKER_HOST (docker deamon -> containers, images) -> REGISTRY 
+
+The client is responsible for relaying the commands we give on the command line to the Docker daemon, which is running on the Docker host. Client and daemon are not necessarily running on the same machine. The daemon does all the heavy lifting: building images, starting containers or retrieving images from the internet such as the Docker Hub.
+
+
+RUN DOCKER CONTAINERS
+
+$ docker run -d -P training/webapp python app.py
+
+This runs the training/webapp-image in detached (-d) mode, exposing all ports (-P), calling python inside the container with one argument app.py, which is a script inside the container.
+
+If you don’t specify a mode, by default, a freshly started container will run in foreground mode. (without -d)
+
+
+=====>> LOGI NODA s
+docker logs <container id or name>
+
+=====>> Configuring containers through environment variables
+When using containers you’ll want to use the same version of the container across all environments. This maximizes portability and predictability.
+
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Docker is all about speed
+
+-> 
+-> 
+-> 
+
+
+
+
+## image vs container
+- an image is the application we want to run
+- a container is an instance of that image running as a process
+- can have many container running off the same images
+
+- docker container ls = docker ps
+- docker container stop = docker stop
+
+
+## run container
+- docker container run --publish 8888:80 --detach nginx
+  --detach = run in background 
+- docker container run --publish 80:80 --detach --name webhost nginx
+  --name = specify the name
+  
+  
+- docker container run -d -p port:port --name {{your_custom_name}} -e {{env_param}} mysql
+  
+  
+## logs
+- docker container logs id/name
+- docker logs id/name
+
+## top - show process inside container
+- docker container top id/name
+ 
+## remove container
+- docker container rm id id id  -> can put namy containers id (container cannot run)
+- docker container rm -f id 	-> force to remove running container
+
+## restart container
+docker restart {{containerID}}
+
+
+## docker manage performance
+- docker container inspect {{image_name/id}}
+- docker container stats
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
