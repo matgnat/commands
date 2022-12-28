@@ -15,4 +15,25 @@ Global unique indentifier of a message
 TOPIC NAME -> PARTICIONS NUMBER -> OFFSET
 
 The number of consumers in group is equal to number of patrtitions on the topic
-Increasing partisions and consumers in group allows to achive scalability 
+Increasing partisions and consumers in group allows to achive scalability
+
+
+
+
+========
+## kafka
+========
+## lista topiców
+================
+bin/kafka-topics.sh --zookeeper ADRES_ZOOKEEPERZ_PORTEM --list
+
+bin/kafka-topics.sh --zookeeper leader.cdt.dcos:2181/dcos-service-kafka-macod-dev01 --list
+
+===================
+## zawartosc topicu
+===================
+bin/kafka-console-consumer.sh --bootstrap-server ADDRESS_KAFKI_WRAZ_Z_PORTEM --topic NAZWA_TOPICU_KTORY_CHCESZ_PRZEJRZEC --from-beginning --property print.key=true --property key.separator="-"
+
+bin/kafka-console-consumer.sh --bootstrap-server dev-macod-brokers.imshealthcloud.net:9626 --topic nuke-dev.bridge-corrections --from-beginning --property print.key=true --property key.separator="-"
+
+bin/kafka-console-consumer.sh --topic nuke-test.importer-commands --from-beginning  --bootstrap-server dev-macod-brokers.imshealthcloud.net:9626 
