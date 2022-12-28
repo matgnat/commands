@@ -1,0 +1,18 @@
+Producer - application that send message (data) to Kafka. It should be small or medium sized piece of data
+Consumer - application that receives message data from Kafka
+Broker - Kafka Server
+Cluster - Group of computers sharing workload for o common purpose
+Topic - A name of a Kafka stream
+Partitions - Part of the topic, numer of machines of topic, where message are broken into number of machines
+Offset - Unique id for a message within the partition. Sequence id given to messages they arrive in a partition  
+Consumer groups - A group o consumers acting as a single logical unit 
+
+PRODUCER --- send message to Kafka Server ---> 					---> message     
+												 KAFKA SERVER							 	CONSUMER
+PRODUCER --- send message to Kafka Server ---> 					---> request for message
+
+Global unique indentifier of a message
+TOPIC NAME -> PARTICIONS NUMBER -> OFFSET
+
+The number of consumers in group is equal to number of patrtitions on the topic
+Increasing partisions and consumers in group allows to achive scalability 
