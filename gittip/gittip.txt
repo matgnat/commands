@@ -1,0 +1,115 @@
+git commit -am "commit text" <- allow to commit and add file to staging area in single command
+
+
+#undo things 
+after commit add some change to the previous commit
+git commit --amend 
+
+#unstaging files
+git add -A - add all files to stagging area
+git reset HEAD <files_to_unstage> git rm --cached <file_to_unstage>
+
+git reset @HEAD <files_to_unstage> - all new change won't be lost. Just undo commit 
+
+#resetting file - it means to start over and undo all changes after last commit 
+git checkout <file_to_discard>
+
+#reset all to last commit
+git reset --hard
+
+
+REMOTES
+git pull - download changes form REMOTE and merge to your branch 
+git fetch - download changes from REMOTE without merge 
+
+git diff origin/master - compare local branche to origin/master
+
+After fetch you can merge or pull 
+
+??Why fetch -> allows to diff changes featched from remote. Can run those chances agains some test to be sure everything works just fine 
+
+#push changes
+git push origin <branch_name>
+
+BRANCHES
+#create branch base on other define in command 
+git checkout -b <new> <base_on_what_branche>
+
+#delete branch
+git branch -D <branch_name> 
+
+REBASE
+
+Initial
+1. checkout on local dev
+1a. pull changes for remote dev
+2. create local branch - commit	
+2a push branche to remote
+
+How to work
+1. checkout on dev
+2. pull from remote dev
+3. checkout on branch e2e
+4. write some code
+5. rebase on dev
+	- git mergetool
+	- git rebase --continue
+	- git rebase --abort
+6. push to remote e2e
+
+LOG
+git log --oneline
+git log --oneline --all
+git log --oneline --all --decorate
+git log --stat - presenting history of adding/removing files
+
+UNDO MISTAKES
+git commit --amend -m "change name of last commit"
+
+moving commit from branch_BAD to branch_OK
+we already commit changes into branch_BAD
+1. be checkout on branch_BAD and get hash commit number
+2. checkout on branch_OK
+3. git cherry-pick #hash number of this commit 
+NOW THE COMMIT IS ON branch_OK
+4. checkout on branch_BAD
+5. get commit #hash number to which we want to move
+
+git reset --soft #hash <-- we delete ealier commit. Changing will stay on staging area 
+git reset #hash <-- we delete ealier commit. Changing will stay but on working directory 
+git reset --hard #hash <-- we delete ealier commit and all tracked file. Untracked will stay on working directory
+
+To remove untracked file and folders from working directory f for force
+git clead -df
+
+
+there is posibility to recover resert --hard commit (git keeping history for like 1 month)
+
+1. git reflog
+2. grab #hash commit one before reser --hard
+3. git checout #hash
+4. Now you are on this hash as on the branch. So, to keep this change and you have to make real branch
+5. git branch backup (or any branch name you want)
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
