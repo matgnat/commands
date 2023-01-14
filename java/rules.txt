@@ -1,0 +1,8 @@
+- do no use @Autowire since this is not testable. Use dependency injection in constructor, set injected object as private final
+- do not use primitives, espacially when null might be assing. In methods, constuctors use non-primitives. One exception - in terms of long and double, if you using
+  some temporary var for calculation using those two is acceptable from performace perspective.
+- try to not use try, catch block - use optional, if not found return custom exception 
+- use BigDecimal alwasy for money
+- use LocalDate or LocalDateTime instead for Instant
+- alwasy test your code 
+- 
