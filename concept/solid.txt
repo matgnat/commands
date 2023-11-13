@@ -1,0 +1,16 @@
+- single responsibility
+    each class should have only one sole purpose,
+    and not be filled with excessive functionality
+- open/close
+    class should be open for extension, close from modification
+- liskov substitution
+    every subclass or derived class should be substitutable for their base or parent class
+    (class implemented interface should be in interface domain - it means it should not have method from interface it cannot handle
+    other way than raised exception)
+    ICar -> Ford ok | ICar -> Human not ok
+- interface integration
+    interface should not force classes to implement what they cannot do.
+    large interface should be divided into small ones
+- dependency inversion
+    component should depend on abstractions, not on concretions
+
