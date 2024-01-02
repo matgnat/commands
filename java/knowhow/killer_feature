@@ -1,0 +1,4 @@
+array - constant time O(1) for get and set data from array
+data[index] = value;
+value = data[index];
+----------------------------------------------------------

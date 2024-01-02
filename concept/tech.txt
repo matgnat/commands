@@ -1,0 +1,8 @@
+Fault tolerance
+- is the resilient property that enables a system to continue operating properly in the event of failure or major dysfunction in one or more of its components.
+- if its operating quality decreases at all, the decrease is proportional to the severity of the failure,
+    as compared to a naively designed system, in which even a small failure can lead to total breakdown.
+
+
+tight coupling - the components of a system are highly dependent on each other.
+                If one component fails, it will also affect the others and eventually bring down the entire system.

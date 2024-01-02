@@ -1,0 +1,13 @@
+API - application programming interface
+    - defines the rules that you must follow to communicate with other software systems.
+    - developers expose or create APIs so that other applications can communicate with their applications programmatically.
+
+REST - Representational State Transfer
+- software architecture that imposes conditions on how an API should work.
+- you can use REST-based architecture to support high-performing and reliable communication at scale.
+- You can easily implement and modify it,
+- cross-platform portability to any API system.
+- APIs that follow the REST architectural style are called REST APIs.
+- Web services that implement REST architecture are called RESTful web services.
+
+

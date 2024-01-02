@@ -1,0 +1,1 @@
+- in our system if cost of creation an instance of a class is high and we need a large number of objects of this class for short duration, then we can use an object pool

@@ -46,6 +46,7 @@ Creational design patterns
 - Factory method patterns
 - Builder patterns
 - Singleton patterns
+- Object Pool
 
 
 Behavioral design patterns

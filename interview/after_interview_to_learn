@@ -1,0 +1,22 @@
+- while loop - done
+- rest, whats is the difference from soap and grahpQL
+- rest - describe how this is working
+- performance test  - metrics, what you can check, mesure
+- set (who objects are compare)
+- how hashCode is calculated
+- design pattern for testing purpose (why to use abstraction in testing)
+- why to use singleton in testing  - give me examples
+- testing - what to do to make testing faster
+- gherkin / why to use  - pros/cons
+- different runner
+- maven profiles
+- maven lifecycles
+- docker
+- contract testing (PACT)
+- what is lambda - why to use lambda
+
+
+
+
+
+

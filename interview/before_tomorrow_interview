@@ -1,0 +1,36 @@
+ - jms / amq / how this is working
+ - big data (hive,impala,kudu,parquet,kafka)
+ - db (some principle, query)
+ - rest assured
+ - remember - integration with test rail
+
+
+ IG
+
+ trading platform - financial speculation
+
+ Over-the-counter is one that is not traded on an exchange.
+ It means that the financial instrument is traded directly between two parties, which could be banks or financial institutions,
+ or between you and your contracts for difference dealer.
+ mostly CFD,
+
+ JMS - interface będący częścią JAVA EE - dekoncepcji, strategii
+ JMS definuje interface API- umożliwia uzyskanie dostepu do usługi
+ This is
+
+ desitional
+ queue - when there is one consumer
+ topic - when there is more than one consumer
+ durable subscriber
+
+ Apache Hive is an ideal solution for queries and data analysis.
+ Hive is written in Jav
+ Hive supports RC files and ORC storage
+
+ Impala - Apache Impala is a massively parallel SQL query engine for the interactive execution of SQL queries
+ Impala is also called an MPP (Massively Parallel Processing) engine,
+ Impala in C++
+ Impala storage supports Hadoop and Apache HBase
+
+
+

@@ -18,6 +18,29 @@ The number of consumers in group is equal to number of patrtitions on the topic
 Increasing partisions and consumers in group allows to achive scalability
 
 
+Kafka Use Cases
+Kafka helps teams that need reliable, organized storage at scale.
+It can handle large amounts of data making it ideal for high volume projects.
+Teams can easily scale and multiple subscribers can consume the data without impacting performance.
+In contrast to Active MQ, Kafka is a distributed system meant for processing a huge amount of data. We can use it for traditional messaging as well as:
+- website activity tracking
+- metrics
+- log aggregation
+- stream processing
+- event sourcing
+- commit logs
+
+ActiveMQ Use Cases
+Active MQ is one of the traditional message brokers, whose goal is to ensure data exchange between applications in a safe and reliable way.
+Never miss a message and process each one exactly once. This works well for financial information, deposits, withdrawals, and more.
+It deals with a small amount of data and is therefore specialized for well-defined message formats and transactional messaging.
+ActiveMQ works well for small amounts of data in a multi-application architecture.
+It’s easy and cost effective to get up and running and complex message routing can be set up and more easily maintained.
+Also, for teams needing exactly-once delivery, ActiveMQ is extremely reliable.
+
+Producer -> ActiveMQ broker (Queue point-to-point) -> Consumer
+Producer -> ActiveMQ broker (Topic pub/sub) -> Consumer
+
 
 
 ========

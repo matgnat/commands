@@ -53,7 +53,7 @@ STREAMS
 ===============
 SOURCE -> FILTER || SORT || MAP -> COLLECT
 
-Stream source -> can be created from Collections, List, Sest, ints, longs, doubles, arrays, lines of a file 
+Stream source -> can be created from Collections, List, Set, ints, longs, doubles, arrays, lines of a file
 
 - intermedialt operation -> filer, map, sort -> return stream 
 - terminal operation -> forEach, collect -> return either void or non-stream results

@@ -1,13 +1,28 @@
 ## httpstatus spring
 https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/http/HttpStatus.html
+102 - Processing
 
-success => 200
-created => 201
-no content => 204
-unauthorized => 401
-bad request (such a validation error) => 400
-resource not found => 404
-server error => 500
+200 - success
+201 - created
+202 - accepted
+204 - no content
+
+300 - Multiple Choices
+301 - Moved Permanently
+
+400 - bad request
+401 - Unauthorized.
+402 - Payment Required
+403 - Forbidden.
+404 - resources not found
+405 - Method Not Allowed.
+408 - Request Timeout
+422 - Unprocessable Entity.
+
+500 - server error
+501 - Not Implemented.
+503 - Service Unavailable.
+504 - Gateway Timeout.
 
 
 http://localhost:8080/swagger-ui/index.html
