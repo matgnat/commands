@@ -1,0 +1,45 @@
+- SSL/TLS
+- CORS (Cross-Origin Resource Sharing)
+- Cross-site Scripting attack
+- CSRF (Cross-Site Request Forgery)
+- Access and Refresh Tokens
+
+
+Transport Layer Security (TLS)
+Secure Sockets Layer (SSL)
+
+SSL and TLS are two protocols for encrypting and securing communications that take places on the public and private networks. Its main use case is to protect and secure your website, web applications, and internal resources
+
+TLS protocol
+
+SSL Connection
+Next, we’re going to look into a very basic outline of the process of establishing an SSL connection.
+
+- Browser requests a HTTPS webpage
+- Web Server sends public key and certificate
+- Browser examines the SSL Certificate
+- Browser creates a symmetric key and sends it to server
+- Web server decrypts symmetric key with its private key
+- Web server sends browser the page with symmetric key
+- Browser decrypts the data and displays page
+
+encryption/decryption
+vulnerable
+
+
+- authentication is the process of verifying who someone is,
+- authorization is the process of verifying what specific applications, files, and data a user has access to
+
+TLS consists of two layers: 
+- the record layer and 
+- the "hand shake" layer. 
+The operation of the protocol can be described in three main steps: 
+- connection establishment, 
+- data encryption
+- authentication.
+
+Establishing a connection - The process of establishing a connection, called "hand shake," involves negotiating security parameters between two parties to the communication. During this process, the parties mutually agree on the encryption algorithms to be used and the keys that will be used to secure the transmitted data.
+
+Data encryption - Once the connection is established, TLS uses symmetric encryption algorithms to secure the transmitted data. This ensures that even if the data is intercepted by an unauthorized person, it will not be readable without the proper decryption key.
+
+Authentication - TLS also offers mechanisms for authenticating the parties to a communication, such as digital certificates. These certificates are issued by trusted institutions, called certification centers (CAs), and are used to confirm the identity of the communication parties. This allows the user to be sure that he or she is communicating with a real website and not an attacker trying to deceive.

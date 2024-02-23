@@ -5,7 +5,7 @@ Cluster - Group of computers sharing workload for o common purpose
 Topic - A name of a Kafka stream
 Partitions - Part of the topic, numer of machines of topic, where message are broken into number of machines
 Offset - Unique id for a message within the partition. Sequence id given to messages they arrive in a partition  
-Consumer groups - A group o consumers acting as a single logical unit 
+Consumer groups - A group o consumers acting as a single logical unit. If the number of partition are less that consumer group, the redundant consumer group will 
 
 PRODUCER --- send message to Kafka Server ---> 					---> message     
 												 KAFKA SERVER							 	CONSUMER
@@ -60,3 +60,18 @@ bin/kafka-console-consumer.sh --bootstrap-server ADDRESS_KAFKI_WRAZ_Z_PORTEM --t
 bin/kafka-console-consumer.sh --bootstrap-server dev-macod-brokers.imshealthcloud.net:9626 --topic nuke-dev.bridge-corrections --from-beginning --property print.key=true --property key.separator="-"
 
 bin/kafka-console-consumer.sh --topic nuke-test.importer-commands --from-beginning  --bootstrap-server dev-macod-brokers.imshealthcloud.net:9626 
+
+
+## Usage 
+- message broker (like ActiveMQ, RabbitMQ, etc)
+- activity monitoring 
+- logs and metrics aggregation 
+- event sourcing 
+- stream processing (kafka Stream)
+
+## Why 
+- horizontal scalability
+- fault tolerance
+- performance independent of data volume
+- data persistence (data stored on disk, no only in memory)
+

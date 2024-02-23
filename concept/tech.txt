@@ -6,3 +6,5 @@ Fault tolerance
 
 tight coupling - the components of a system are highly dependent on each other.
                 If one component fails, it will also affect the others and eventually bring down the entire system.
+
+

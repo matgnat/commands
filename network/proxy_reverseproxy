@@ -1,0 +1,17 @@
+- Proxy działa jako pośrednik między klientem a serwerem, który udostępnia te zasoby. Proxy może być używany do kontroli dostępu do zasobów serwera lub do przyspieszenia dostępu do zasobów serwera poprzez buforowanie.
+- Celem serwera proxy może być zachowanie prywatności lub ominięcie ograniczeń regionalnych.
+
+## Proxy (Forward Proxy)
+
+- protects the client's online identity (IP client address is hidden from the server - only IP addess of the foward proxy is visible to the server)
+- bypasses browsking restriction 
+- blocks access to certain content
+
+## Reverse Proxy
+
+- protect a web site 
+- load balancing 
+- caching 
+- handles SSL encryption 
+
+

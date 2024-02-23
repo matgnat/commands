@@ -1,0 +1,24 @@
+===== final, finally and finalize 
+================================================================
+
+final:
+    for class - can not exted from that class
+    for method - cannot override that method
+    for variable - cannot override that variable
+
+finally: 
+    - exists along with try/catch block to execute code no matter what 
+    - finally is a block used in Java to ensure that a section of code is always executed
+
+finalize:
+    - perform cleanup processing on an object before it is garbage collected
+
+
+==== static vs non-static methods
+================================================================
+
+
+
+
+
+  

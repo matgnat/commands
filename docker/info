@@ -1,4 +1,4 @@
-DOCKER
+## DOCKER
 
 - Pytania ???
 
@@ -51,11 +51,12 @@ setup developerski -> nadpisuje bazowy, reszta bez zmian
 póżniej ewentulanie jakiś CI / setup pod lokalne testy 
 
 
-========================================================
 
 CLIENT -> DOCKER_HOST (docker deamon -> containers, images) -> REGISTRY 
 
-The client is responsible for relaying the commands we give on the command line to the Docker daemon, which is running on the Docker host. Client and daemon are not necessarily running on the same machine. The daemon does all the heavy lifting: building images, starting containers or retrieving images from the internet such as the Docker Hub.
+The client is responsible for relaying the commands we give on the command line to the Docker daemon, which is running on the Docker host. 
+Client and daemon are not necessarily running on the same machine. 
+The daemon does all the heavy lifting: building images, starting containers or retrieving images from the internet such as the Docker Hub.
 
 
 RUN DOCKER CONTAINERS
@@ -86,8 +87,6 @@ Docker is all about speed
 -> 
 -> 
 -> 
-
-
 
 
 ## image vs container
@@ -127,6 +126,22 @@ docker restart {{containerID}}
 ## docker manage performance
 - docker container inspect {{image_name/id}}
 - docker container stats
+
+
+## docker compose basic run
+docker compose up -d
+
+## develop and watch changes in real time 
+docker compose watch
+
+## download image 
+docker pull image:tag
+
+## list all image 
+docker images
+
+## cypress 
+docker run -it --entrypoint=cypress cypress/included:13.6.5 info
 
 
 

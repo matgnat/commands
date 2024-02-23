@@ -51,3 +51,15 @@ Internationalization - i18n
 - have consumers from around the world
 - typically HTTP Request Header - Accept-Language
 
+
+HTTP stands for Hypertext Transfer Protocol, which is the standard protocol for communication between web clients and servers.
+HTTP methods are the actions that clients can request from servers, such as GET, POST, PUT, PATCH, DELETE.
+REST stands for Representational State Transfer, which is a set of principles and best practices for designing web APIs. 
+RESTful APIs are web APIs that follow the REST principles, such as using HTTP methods to perform operations on resources, using uniform and meaningful URLs to identify resources, and using standard formats to exchange data, such as JSON or XML. 
+RESTful APIs aim to be simple, stateless, scalable, and consistent.
+Path parameters are request parameters attached to a URL that point to a specific REST API resource. The path parameter is separated from the URL by a `/`, and from the query parameter(s) by a question mark (`?`). 
+The path parameter defines the resource location, while the query parameter defines sort, pagination, or filter operations.
+
+OPTIONS method returns info about API (methods/content type)
+HEAD method returns info about resource (version/length/type)
+
