@@ -1,0 +1,11 @@
+## bash package manager
+- apt 
+- apt-get 
+
+## apt 
+- get package which are not on local db and not installed
+`$ apt update`
+
+- install package
+`$ apt install package-name`
+

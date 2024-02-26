@@ -1,4 +1,43 @@
 ## DOCKER
+- platform for building, running and shipping application 
+
+## VM Problem 
+- each VM needs a full-blown OS
+- slow to start 
+- resource intensive
+
+## Container profit
+- allow running multiple apps in isolation 
+- are lightweight
+- use OS of the host
+- start quicly 
+- need less hardware resources
+
+## Development workflow 
+- define in dockerfile base on which image build workflow 
+
+FROM node: alpine
+COPY . /app
+WORKDIR /app
+CDM node app.js
+
+- build image 
+`$ docker build -t image-name <path-to-Dockerfile>`
+`$ docker build -t hello-docker .`
+
+- run image 
+`$ docker run -it image-name`
+
+- open container in interactive mode
+`$ docker exec -it <mycontainer> bash`
+
+
+
+
+
+
+
+
 
 - Pytania ???
 

@@ -1,0 +1,10 @@
+## redirection
+`>` save output to file
+
+`cat file.txt > file_2.txt`
+`echo hello > file_3.txt`
+`ls -l /etc/ > file_4.txt`
+
+
+
+

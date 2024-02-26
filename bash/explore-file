@@ -1,0 +1,12 @@
+## small file  
+`$ cat file`
+
+## big file
+- more
+- less - view long file in interactive way 
+- head -n 5 <file> - 5 first lines
+- tail -n 5 <file> - 5 last lines
+
+
+
+
